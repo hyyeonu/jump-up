@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>결혼식 축의금 안 내기 연구회 (K-MERA)</title>
+    <title>JUMP-UP 단계별 영어교육 프로그램</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,1027 +11,393 @@
             theme: {
                 extend: {
                     colors: {
-                        academic: {
-                            bg: '#fbf9f5',
-                            card: '#ffffff',
-                            navy: '#0f172a',
-                            subnavy: '#1e293b',
-                            crimson: '#881337',
-                            crimsonlight: '#991b1b',
-                            gold: '#b45309',
-                            muted: '#64748b',
-                            border: '#e2e8f0'
-                        }
+                        skybrand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        darkslate: '#0f172a',
                     },
                     fontFamily: {
-                        serif: ['MaruBuri', 'Nanum Myeongjo', 'serif'],
                         sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'System-UI', 'Roboto', 'sans-serif'],
-                        mono: ['Courier New', 'Courier', 'monospace']
                     }
                 }
             }
         }
     </script>
-    <!-- Fonts -->
+    <!-- Pretendard Font -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" />
     <style>
         body {
             font-family: 'Pretendard', sans-serif;
-            background-color: #fbf9f5;
+            background-color: #f8fafc;
             color: #0f172a;
             word-break: keep-all;
         }
-        .serif-title {
-            font-family: 'Nanum Myeongjo', serif;
+        .flat-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: all 0.25s ease-in-out;
         }
-        .paper-texture {
-            background-color: #ffffff;
-            background-image: radial-gradient(#e5e7eb 0.75px, transparent 0.75px);
-            background-size: 16px 16px;
+        .flat-card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.08);
         }
-        .academic-stamp {
-            border: 3px double #881337;
-            color: #881337;
-            transform: rotate(-12deg);
-        }
-        .card-shadow {
-            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
-        }
-        .card-shadow:hover {
-            box-shadow: 0 12px 28px -4px rgba(136, 19, 55, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
+        .active-tab {
+            background-color: #0ea5e9 !important;
+            color: #ffffff !important;
+            border-color: #0ea5e9 !important;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-academic-crimson selection:text-white">
+<body class="antialiased text-slate-800 bg-slate-50 min-h-screen flex flex-col justify-between selection:bg-skybrand-200 selection:text-skybrand-700">
 
-    <!-- Top Academic Announcement Ticker -->
-    <div class="bg-academic-navy text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-2">
-                <span class="bg-academic-crimson text-white px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase">공지</span>
-                <span class="truncate">2026년도 제42차 학술대회: "축의금 인플레이션과 청년 통장 보호 방안" 집필진 모집</span>
-            </div>
-            <div class="flex items-center gap-4 text-[11px] text-slate-400">
-                <span>ISSN: 2026-9912 (Online)</span>
-                <span class="hidden md:inline">|</span>
-                <span class="hidden md:inline">정부 미승인 가상연구기관</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Official Header -->
-    <header class="sticky top-0 z-40 bg-[#fbf9f5]/95 backdrop-blur-md border-b border-academic-border">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-lg bg-academic-navy text-amber-100 flex items-center justify-center font-serif text-xl font-black border-2 border-amber-600/40 shadow-sm">
-                    축
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-skybrand-500 flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-md shadow-skybrand-200 group-hover:bg-skybrand-600 transition-colors">
+                    J
                 </div>
-                <div>
-                    <div class="text-[11px] font-bold text-academic-crimson tracking-widest uppercase">K-MERA 학술연구원</div>
-                    <div class="text-lg sm:text-xl font-black tracking-tight text-academic-navy serif-title">
-                        결혼식 축의금 안 내기 연구회
-                    </div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-semibold text-skybrand-600 tracking-tight">삼성꿈장학재단 배움터 교육지원사업</span>
+                    <span class="font-extrabold text-slate-900 text-base sm:text-lg tracking-tight">JUMP-UP 영어</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Menu -->
-            <nav class="hidden lg:flex items-center gap-7 font-medium text-sm text-slate-700">
-                <a href="#intro" class="hover:text-academic-crimson transition-colors">연구회 소개</a>
-                <a href="#hypotheses" class="hover:text-academic-crimson transition-colors">10가지 가설</a>
-                <a href="#stats" class="hover:text-academic-crimson transition-colors">통계 분석</a>
-                <a href="#test" class="hover:text-academic-crimson transition-colors">회피 가능성 테스트</a>
-                <a href="#faculty" class="hover:text-academic-crimson transition-colors">연구진</a>
-                <a href="#conclusion" class="hover:text-academic-crimson transition-colors">최종 결론</a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                <a href="#intro" class="hover:text-skybrand-600 transition-colors">특징</a>
+                <a href="#levels" class="hover:text-skybrand-600 transition-colors">단계별 클래스</a>
+                <a href="#movies" class="hover:text-skybrand-600 transition-colors">영화 커리큘럼</a>
+                <a href="#growth" class="hover:text-skybrand-600 transition-colors">성장 스토리</a>
             </nav>
 
-            <!-- Quiz CTA Button -->
-            <a href="#test" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold text-white bg-academic-crimson hover:bg-academic-crimsonlight rounded-lg shadow-sm transition-all">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-                </svg>
-                회피 가능성 테스트
+            <a href="#levels" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-skybrand-700 bg-skybrand-50 rounded-full hover:bg-skybrand-100 transition-colors">
+                클래스 살펴보기
             </a>
 
             <!-- Mobile Menu Toggle -->
-            <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-200/50">
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="메뉴 열기">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
 
-        <!-- Mobile Nav Dropdown -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-academic-border px-6 py-4 space-y-3 text-sm text-slate-800">
-            <a href="#intro" class="block py-1 hover:text-academic-crimson">연구회 소개</a>
-            <a href="#hypotheses" class="block py-1 hover:text-academic-crimson">10가지 가설</a>
-            <a href="#stats" class="block py-1 hover:text-academic-crimson">통계 분석</a>
-            <a href="#test" class="block py-1 hover:text-academic-crimson">회피 가능성 테스트</a>
-            <a href="#faculty" class="block py-1 hover:text-academic-crimson">연구진</a>
-            <a href="#conclusion" class="block py-1 hover:text-academic-crimson">최종 결론</a>
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 font-medium text-sm text-slate-700">
+            <a href="#intro" class="block py-1 hover:text-skybrand-600">프로그램 특징</a>
+            <a href="#levels" class="block py-1 hover:text-skybrand-600">단계별 클래스</a>
+            <a href="#movies" class="block py-1 hover:text-skybrand-600">영화 커리큘럼</a>
+            <a href="#growth" class="block py-1 hover:text-skybrand-600">아이들의 변화</a>
         </div>
     </header>
 
     <main class="flex-grow">
         <!-- Hero Section -->
-        <section id="intro" class="relative py-16 sm:py-24 border-b border-academic-border bg-[#fbf9f5]">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 relative">
-                
-                <!-- Watermark Stamp -->
-                <div class="hidden md:block absolute right-8 top-4 academic-stamp px-5 py-2 rounded-lg font-bold text-center opacity-80 pointer-events-none select-none">
-                    <div class="text-[10px] tracking-widest uppercase">PARODY RESEARCH</div>
-                    <div class="text-base font-extrabold">심의 필 (審議 畢)</div>
-                    <div class="text-[9px] text-slate-500">2026.08.14 승인</div>
+        <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+                <!-- Top Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-skybrand-50 border border-skybrand-100 text-skybrand-700 font-bold text-xs sm:text-sm mb-6">
+                    <span class="w-2 h-2 rounded-full bg-skybrand-500 animate-pulse"></span>
+                    삼성꿈장학재단 지원 배움터 교육프로그램
                 </div>
 
-                <div class="max-w-3xl">
-                    <!-- Academic Badge -->
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/80 border border-amber-300 text-amber-900 font-medium text-xs mb-6">
-                        <span class="w-2 h-2 rounded-full bg-academic-crimson animate-ping"></span>
-                        학술 가상 프로젝트 · K-MERA 리포트 #2026-08
-                    </div>
+                <!-- Main Hero Headline -->
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-snug sm:leading-tight mb-6">
+                    영어가 공부가 아닌 <br class="hidden sm:block"/>
+                    <span class="text-skybrand-500 underline decoration-skybrand-200 decoration-wavy decoration-2">즐거운 표현</span>이 되는 시간
+                </h1>
 
-                    <!-- Main Title -->
-                    <h1 class="text-3xl sm:text-5xl font-black text-academic-navy leading-tight sm:leading-tight mb-6 serif-title">
-                        결혼식 축의금 안 내기 연구회
-                    </h1>
+                <!-- Subtitle (under 30% text ratio rule) -->
+                <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 font-medium leading-relaxed mb-10">
+                    애니메이션과 영화, 프로젝트 활동을 통해 자발적으로 듣고, 말하고, 쓰며 완성하는 단계별 실전 영어 프로그램 <strong class="text-slate-900 font-bold">JUMP-UP</strong>
+                </p>
 
-                    <!-- Catchphrase Quote Box -->
-                    <div class="p-6 sm:p-8 bg-white border-l-4 border-academic-crimson rounded-r-2xl card-shadow mb-8 relative">
-                        <p class="text-xl sm:text-2xl font-extrabold text-academic-navy leading-relaxed serif-title">
-                            “축하는 하고 싶다.<br class="sm:hidden"/>
-                            그런데 통장은 축하받고 싶지 않다.”
-                        </p>
-                    </div>
-
-                    <!-- Small Description -->
-                    <p class="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
-                        축의금의 사회적 의미와 개인의 경제적 자유 사이에서 인류는 오랫동안 고민해 왔습니다. 
-                        우리는 그 누구보다 진지하게 <strong class="text-academic-crimson font-bold">‘축의금 없이도 축하할 수 있는가?’</strong>를 연구합니다.
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        <a href="#hypotheses" class="px-7 py-4 bg-academic-navy hover:bg-slate-800 text-white font-bold text-sm rounded-xl text-center shadow-md transition-all flex items-center justify-center gap-2">
-                            연구 결과 보기 (10가지 가설)
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </a>
-                        <a href="#test" class="px-7 py-4 bg-academic-crimson hover:bg-academic-crimsonlight text-white font-bold text-sm rounded-xl text-center shadow-md transition-all flex items-center justify-center gap-2">
-                            나의 축의금 회피 가능성 테스트
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Mandatory Disclaimer -->
-                    <div class="mt-8 text-xs text-slate-500 flex items-center gap-1.5 font-medium">
-                        <svg class="w-4 h-4 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                <!-- Quick Action Button -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#levels" class="w-full sm:w-auto px-8 py-4 bg-skybrand-500 hover:bg-skybrand-600 text-white font-bold text-base rounded-2xl shadow-lg shadow-skybrand-200 transition-all flex items-center justify-center gap-2 group">
+                        수준별 클래스 보기
+                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
-                        ※ 본 연구회는 친구 관계의 파탄을 책임지지 않습니다.
-                    </div>
+                    </a>
                 </div>
+            </div>
 
-                <!-- Academic Stats Summary Strip -->
-                <div class="mt-14 pt-8 border-t border-slate-300 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div class="p-4 bg-white/80 rounded-xl border border-slate-200">
-                        <div class="text-xs text-slate-500 mb-1 font-medium">누적 연구 가설</div>
-                        <div class="text-2xl font-black text-academic-navy serif-title">10 개</div>
+            <!-- Flat Visual Hero Banner Container -->
+            <div class="max-w-4xl mx-auto mt-12 px-4">
+                <div class="bg-skybrand-50 rounded-3xl p-6 sm:p-10 border border-skybrand-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-left space-y-2">
+                        <div class="text-xs font-bold text-skybrand-600 uppercase tracking-widest">Core Philosophy</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900">내 수준에 맞는 익숙한 영화로 시작!</h3>
+                        <p class="text-xs sm:text-sm text-slate-600">외우는 주입식 학습 대신 친근한 스토리 속 살아있는 표현을 내 것으로 만듭니다.</p>
                     </div>
-                    <div class="p-4 bg-white/80 rounded-xl border border-slate-200">
-                        <div class="text-xs text-slate-500 mb-1 font-medium">평균 우정 위험도</div>
-                        <div class="text-2xl font-black text-academic-crimson serif-title">88.4 %</div>
-                    </div>
-                    <div class="p-4 bg-white/80 rounded-xl border border-slate-200">
-                        <div class="text-xs text-slate-500 mb-1 font-medium">실험 피험자 통장 잔액</div>
-                        <div class="text-2xl font-black text-emerald-700 serif-title">보존 완료</div>
-                    </div>
-                    <div class="p-4 bg-white/80 rounded-xl border border-slate-200">
-                        <div class="text-xs text-slate-500 mb-1 font-medium">학회 논문 인용수</div>
-                        <div class="text-2xl font-black text-slate-700 serif-title">0 회</div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-white px-4 py-3 rounded-2xl border border-skybrand-200 text-center shadow-sm">
+                            <div class="text-2xl font-black text-skybrand-500">3</div>
+                            <div class="text-xs font-semibold text-slate-500">단계별 반구성</div>
+                        </div>
+                        <div class="bg-white px-4 py-3 rounded-2xl border border-skybrand-200 text-center shadow-sm">
+                            <div class="text-2xl font-black text-skybrand-500">4+</div>
+                            <div class="text-xs font-semibold text-slate-500">대표 명작 콘텐츠</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Hypotheses Section -->
-        <section id="hypotheses" class="py-16 sm:py-24 bg-white border-b border-academic-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                
-                <!-- Section Title -->
-                <div class="text-center max-w-2xl mx-auto mb-14">
-                    <div class="text-xs font-bold text-academic-crimson tracking-widest uppercase mb-2">RESEARCH PAPERS & HYPOTHESES</div>
-                    <h2 class="text-2xl sm:text-4xl font-black text-academic-navy tracking-tight serif-title mb-4">
-                        「축의금 없이 결혼식에 참석하는 10가지 가설」
-                    </h2>
-                    <p class="text-sm text-slate-600">
-                        학술적 엄밀성을 바탕으로 검증된 가상의 회피 전략 10선입니다.
-                    </p>
-                </div>
-
-                <!-- 10 Hypotheses Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="hypothesesGrid">
-
-                    <!-- Research 01 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 01</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-01</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">현금 없는 사람 코스프레</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “요즘 현금을 들고 다니지 않는다는 이유로 축의금을 피할 수 있는가?”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                카드와 계좌이체가 가능한 시대에 상당히 불리한 가설. 축의대 앞 QR코드 및 토스 송금 요구 시 즉각 파산할 위험 존재.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 02 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 02</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-02</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">축의금 대신 축가 제공</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “축가를 열창함으로써 금전적 축하를 음악적 축하로 대체할 수 있는가?”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★★★☆ (80%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[80%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                노래를 잘한다면 가능성이 있다. 못한다면 축의금보다 더 큰 것(명예와 친구)을 잃을 수 있다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 03 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 03</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-03</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">식대 상계 이론</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “결혼식에 초대받아 밥을 먹었으므로 식대는 신랑신부가 부담해야 한다는 순수 회계학적 상계 이론.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★☆☆☆☆ (20%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[20%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★★★★ (100%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[100%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★★★★ (100%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[100%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                논리적으로는 대단히 흥미롭지만, 현실 학계 및 결혼식장 도덕률에서는 전혀 인정받지 못하고 있다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 04 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 04</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-04</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">노동력 대체 모델</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “축의금 대신 포토존 정리, 화환 수령, 안내, 식권 배부 등 일손을 제공하여 청구액을 0원으로 현물화.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★★★☆ (80%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[80%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★☆☆☆☆ (20%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[20%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★☆☆☆☆ (20%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[20%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                현금 대신 노동으로 축하하는 매우 실용적인 권장 연구 방향. 다만 4시간 동안 쉬지 않고 일해야 한다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 05 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 05</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-05</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">현물 축하 이론</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “축의금 봉투 대신 신혼집 맞춤 실물 가전이나 소품 선물을 직접 들고 전달한다.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                선물이 축의금 가격보다 비싸질 경우 본 연구회의 근본적 존재 목적이 소멸되는 패러독스 발생.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 06 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 06</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-06</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">참석 자체가 축의금 가설</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “바쁜 현대 사회에서 지방 먼 길까지 내가 참석해준 것 자체가 수십만 원의 가치라는 이론.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★★★☆ (80%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[80%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★★★☆ (80%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[80%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                철학적/감정적 설득력은 매우 높으나, 사회적/실질적 합의 및 예식장 식대 현실과의 괴리가 극심함.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 07 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 07</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-07</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">진심 100% 메시지 전략</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “돈 대신 12장 분량의 진심 어린 장문 자필 편지 및 손수 제작 앨범을 건넨다.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                감동 지수는 극대화되나, 결혼식이 끝난 후 통장 잔액 외에는 그 무엇도 해결해 주지 않는다.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 08 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 08</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-08</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">공동 축의금 분산 투자 모델</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “친구 5명이 하나의 봉투에 총 5만 원을 넣고 이름을 공동으로 빽빽하게 기재하는 분산법.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★★★☆ (80%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[80%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                개별 부담 비용을 획기적으로 줄일 수 있으나, 공모자(친구들) 사이의 담합 유지가 필수적.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 09 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 09</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-09</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">사진작가 대체 모델</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “카메라나 최신 스마트폰을 들고 예식 내내 스냅 사진기사처럼 분주하게 움직여 봉투 소지 여부를 흐린다.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★☆☆☆ (40%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[40%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★★☆☆ (60%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[60%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                보정된 스냅컷이 잘 나온다면 훌륭한 대체재. 초점이 흔들린 사진 300장이라면 연구 대실패.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Research 10 -->
-                    <div class="bg-academic-bg border border-academic-border rounded-2xl p-6 card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="px-2.5 py-1 bg-academic-navy text-white text-xs font-mono font-bold rounded">연구 10</span>
-                                <span class="text-xs text-slate-500 font-mono">ID: HYP-2026-10</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-academic-navy mb-2 serif-title">당당하게 축하하기</h3>
-                            <p class="text-xs text-slate-600 mb-4 bg-white p-3 rounded-lg border border-slate-200 leading-relaxed">
-                                “아무런 변명이나 핑계 없이 빈손으로 참석하여 오직 활짝 웃는 얼굴과 포옹으로 진심 축하하기.”
-                            </p>
-                            
-                            <!-- Metrics -->
-                            <div class="space-y-2 mb-4 text-xs">
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>성공 가능성</span>
-                                        <span class="font-bold text-amber-700">★☆☆☆☆ (10%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-amber-600 h-full w-[10%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>민망함 지수</span>
-                                        <span class="font-bold text-slate-800">★★★★★ (100%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-slate-700 h-full w-[100%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between text-slate-600 mb-1">
-                                        <span>우정 손상 위험도</span>
-                                        <span class="font-bold text-academic-crimson">★★★★★ (100%)</span>
-                                    </div>
-                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                                        <div class="bg-academic-crimson h-full w-[100%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-200">
-                            <div class="text-xs font-bold text-academic-crimson mb-1">학회 논평:</div>
-                            <p class="text-xs text-slate-700 leading-relaxed bg-amber-50/70 p-3 rounded-lg border border-amber-200">
-                                개념상 가장 순수하고 단순하지만, 인류 문명사에서 가장 높은 정신적 난이도를 보유한 극단적 가설.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Statistics Section -->
-        <section id="stats" class="py-16 sm:py-24 bg-academic-bg border-b border-academic-border">
+        <!-- Key Pillars Section -->
+        <section id="intro" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200/60">
             <div class="max-w-5xl mx-auto px-4 sm:px-6">
-                
-                <div class="text-center max-w-2xl mx-auto mb-12">
-                    <div class="text-xs font-bold text-academic-crimson tracking-widest uppercase mb-2">EMPIRICAL DATA ANALYSIS</div>
-                    <h2 class="text-2xl sm:text-4xl font-black text-academic-navy tracking-tight serif-title mb-3">
-                        연구회가 분석한 축의금 회피 지수
-                    </h2>
-                    <p class="text-xs text-slate-500">
-                        ※ 본 수치는 실제 학술 데이터가 아닌 패러디 목적의 가상 통계 데이터입니다.
-                    </p>
-                </div>
-
-                <!-- Stats Grid Visual Display -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    
-                    <!-- Stat Card 1 -->
-                    <div class="bg-white p-6 rounded-2xl border border-academic-border card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">가설 실증 성공률</div>
-                            <div class="text-4xl font-black text-academic-navy serif-title mb-3">72 %</div>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                초기 단계에서 축의 봉투 제출을 모면하거나 상황을 모호하게 유예시킨 가상 비율.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100">
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-academic-navy h-full w-[72%]"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stat Card 2 -->
-                    <div class="bg-white p-6 rounded-2xl border border-academic-border card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">친구에게 들킬 가능성</div>
-                            <div class="text-4xl font-black text-academic-crimson serif-title mb-3">94 %</div>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                정산 장부 확인 단계에서 미제출 사실이 드러나 연락을 받게 될 압도적 확률.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100">
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-academic-crimson h-full w-[94%]"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stat Card 3 -->
-                    <div class="bg-white p-6 rounded-2xl border border-academic-border card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">식사 후 심리적 죄책감</div>
-                            <div class="text-4xl font-black text-amber-600 serif-title mb-3">68 %</div>
-                            <p class="text-xs text-slate-600 leading-relaxed">
-                                뷔페 연어와 갈비탕을 접시에 담을 때 일어나는 양심의 가책 수치.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-slate-100">
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-amber-500 h-full w-[68%]"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Secondary Bar Chart Visual -->
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-academic-border card-shadow">
-                    <h3 class="text-lg font-bold text-academic-navy mb-6 serif-title flex items-center gap-2">
-                        <svg class="w-5 h-5 text-academic-crimson" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                        핵심 심리 지표 비교분석
-                    </h3>
-
-                    <div class="space-y-5 text-xs sm:text-sm">
-                        <!-- Bar Item 1 -->
-                        <div>
-                            <div class="flex justify-between mb-1.5 font-medium">
-                                <span class="text-slate-700">통장 잔액 보존율</span>
-                                <span class="font-bold text-emerald-700">100%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
-                                <div class="bg-emerald-600 h-full w-[100%] transition-all duration-1000"></div>
-                            </div>
-                        </div>
-
-                        <!-- Bar Item 2 -->
-                        <div>
-                            <div class="flex justify-between mb-1.5 font-medium">
-                                <span class="text-slate-700">결혼식 이후 관계가 어색해질 가능성</span>
-                                <span class="font-bold text-amber-700">37%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
-                                <div class="bg-amber-600 h-full w-[37%] transition-all duration-1000"></div>
-                            </div>
-                        </div>
-
-                        <!-- Bar Item 3 -->
-                        <div>
-                            <div class="flex justify-between mb-1.5 font-medium">
-                                <span class="text-slate-700">“그래도 친구니까 내야 하지 않나?” 내적 갈등 지수</span>
-                                <span class="font-bold text-academic-crimson">97%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
-                                <div class="bg-academic-crimson h-full w-[97%] transition-all duration-1000"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Interactive Quiz Section -->
-        <section id="test" class="py-16 sm:py-24 bg-white border-b border-academic-border">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6">
-                
-                <div class="text-center mb-10">
-                    <span class="px-3 py-1 bg-academic-crimson text-white text-xs font-bold rounded-full uppercase tracking-wider">Self Diagnosis</span>
-                    <h2 class="text-2xl sm:text-4xl font-black text-academic-navy tracking-tight serif-title mt-3 mb-2">
-                        나의 축의금 회피 가능성 테스트
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-600">
-                        5가지 간단한 질문을 통해 당신의 회피 가능 지수와 맞춤 연구 방향을 진단해 드립니다.
-                    </p>
-                </div>
-
-                <!-- Quiz Card Container -->
-                <div class="bg-academic-bg border-2 border-academic-navy rounded-3xl p-6 sm:p-10 card-shadow relative overflow-hidden" id="quizContainer">
-                    
-                    <!-- Step Progress Bar -->
-                    <div class="mb-8">
-                        <div class="flex justify-between text-xs font-bold text-slate-500 mb-2">
-                            <span id="quizStepText">질문 1 / 5</span>
-                            <span id="quizPercentText">20% 완료</span>
-                        </div>
-                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                            <div id="quizProgressBar" class="bg-academic-crimson h-full w-[20%] transition-all duration-300"></div>
-                        </div>
-                    </div>
-
-                    <!-- Dynamic Quiz Questions View -->
-                    <div id="quizQuestionBox">
-                        <!-- Questions will render via JavaScript -->
-                    </div>
-
-                    <!-- Quiz Result Container (Initially Hidden) -->
-                    <div id="quizResultBox" class="hidden text-center py-4">
-                        <div class="inline-block academic-stamp px-6 py-2 rounded-lg font-bold mb-6">
-                            <span class="text-xs">K-MERA 진단 보고서</span>
-                        </div>
-                        
-                        <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">당신의 축의금 회피 가능성</div>
-                        <div id="resultScore" class="text-5xl sm:text-6xl font-black text-academic-crimson serif-title mb-4">0%</div>
-
-                        <div class="bg-white p-6 rounded-2xl border border-academic-border mb-6 text-left space-y-3">
-                            <div>
-                                <span class="text-xs font-bold text-slate-400">연구회 판정:</span>
-                                <h4 id="resultDiagnosis" class="text-lg font-bold text-academic-navy">진단 중...</h4>
-                            </div>
-                            <div class="pt-3 border-t border-slate-100">
-                                <span class="text-xs font-bold text-slate-400">추천 연구 방향:</span>
-                                <p id="resultRecommendation" class="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium mt-1">
-                                    설명 로딩 중...
-                                </p>
-                            </div>
-                        </div>
-
-                        <button onclick="resetQuiz()" class="px-6 py-3 bg-academic-navy hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition-all shadow">
-                            테스트 다시하기
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Faculty Section -->
-        <section id="faculty" class="py-16 sm:py-24 bg-academic-bg border-b border-academic-border">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6">
-                
-                <div class="text-center max-w-2xl mx-auto mb-14">
-                    <div class="text-xs font-bold text-academic-crimson tracking-widest uppercase mb-2">RESEARCH FACULTY</div>
-                    <h2 class="text-2xl sm:text-4xl font-black text-academic-navy tracking-tight serif-title mb-3">
-                        연구진 소개
-                    </h2>
-                    <p class="text-xs text-slate-600">
-                        축의금 절감과 사회적 관계의 평형을 위해 연구에 매진하는 학학진진 연구진입니다.
-                    </p>
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">왜 JUMP-UP 일까요?</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-2">아이들이 직접 체득하는 3가지 차별화된 학습 가치</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="flat-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-skybrand-100 flex items-center justify-center text-skybrand-600 mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h18M3 16h18"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">애니메이션 & 영화 활용</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                화면 속 대사와 생생한 맥락을 기반으로 듣고 말하며 지루함 없이 영어와 친해집니다.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-skybrand-600">
+                            #Cars1 #라따뚜이 #악마는프라다
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flat-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-skybrand-100 flex items-center justify-center text-skybrand-600 mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">수준별 3단계 과정</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Hop ➔ Step ➔ Jump 과정으로 아이 본인의 속도에 맞춰 탄탄한 발판을 쌓아갑니다.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-skybrand-600">
+                            #Hop #Step #Jump
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flat-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-skybrand-100 flex items-center justify-center text-skybrand-600 mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">직접 만들어보는 프로젝트</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                오디오북, 북트레일러, 토론 등 주도적으로 영어 결과물을 만들어내며 자신감을 높입니다.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-skybrand-600">
+                            #북트레일러 #디베이트
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Launchpad Section -->
+        <section class="py-16 sm:py-20 bg-white border-b border-slate-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                    <!-- Accent background graphic element -->
+                    <div class="absolute -right-10 -top-10 w-60 h-60 bg-skybrand-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                    <div class="max-w-2xl relative z-10">
+                        <div class="inline-block px-3 py-1 bg-skybrand-500 text-white text-xs font-bold rounded-lg mb-4">
+                            모든 반의 공통 출발점 🏎️
+                        </div>
+                        <h2 class="text-2xl sm:text-4xl font-black mb-4 tracking-tight">
+                            「Cars 1」으로 시작하는 <br/>단계별 맞춤 성장
+                        </h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                            JUMP-UP 프로그램의 모든 클래스는 익숙하고 흥미진진한 애니메이션 「Cars 1」을 출발점으로 삼습니다. 같은 영화로 출발하지만, 각 클래스의 수준에 맞추어 다채로운 학습 방식으로 깊이 있게 접근합니다.
+                        </p>
+                    </div>
+
+                    <!-- Visual Flow Pathway with arrows -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10 pt-4 border-t border-slate-800">
+                        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-lg">🐇</span>
+                                <span class="text-xs font-extrabold text-skybrand-400 uppercase">Step 01</span>
+                            </div>
+                            <h4 class="font-bold text-white text-base">Hop Class</h4>
+                            <p class="text-xs text-slate-400 mt-1">인물 관계도와 에피소드로 기본 표현을 차근차근 입에 익히는 과정</p>
+                        </div>
+
+                        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-lg">👟</span>
+                                <span class="text-xs font-extrabold text-skybrand-400 uppercase">Step 02</span>
+                            </div>
+                            <h4 class="font-bold text-white text-base">Step Class</h4>
+                            <p class="text-xs text-slate-400 mt-1">가상 상황 질문과 워크시트로 말하고 쓰며 생각의 힘을 키우는 과정</p>
+                        </div>
+
+                        <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-lg">🏎️</span>
+                                <span class="text-xs font-extrabold text-skybrand-400 uppercase">Step 03</span>
+                            </div>
+                            <h4 class="font-bold text-white text-base">Jump Class</h4>
+                            <p class="text-xs text-slate-400 mt-1">Cars 1 쉐도잉으로 레이싱 표현을 미리 마스터한 뒤 심화 디베이트로 진입</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Level Interactive Cards Section -->
+        <section id="levels" class="py-16 sm:py-24 bg-slate-50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+                    <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">클래스별 상세 안내</h2>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">아이의 언어 성장에 꼭 맞춰진 3가지 클래스 프로필입니다.</p>
                     
-                    <!-- Faculty 1 -->
-                    <div class="bg-white rounded-2xl p-6 border border-academic-border card-shadow flex flex-col justify-between">
-                        <div>
-                            <div class="w-16 h-16 rounded-2xl bg-academic-navy text-amber-200 flex items-center justify-center font-serif font-bold text-xl mb-4 shadow">
-                                김
-                            </div>
-                            <span class="px-2 py-0.5 bg-amber-100 text-amber-900 text-[11px] font-bold rounded">수석연구원</span>
-                            <h3 class="text-xl font-bold text-academic-navy mt-1 mb-2 serif-title">김축의 박사</h3>
-                            
-                            <div class="space-y-1.5 text-xs text-slate-600 mb-4">
-                                <p><strong class="text-slate-800">전문분야:</strong> 결혼식 경제학 & 봉투 정산학</p>
-                                <p><strong class="text-slate-800">연구경력:</strong> 7년</p>
-                            </div>
+                    <!-- Tab selector for mobile / desktop quick toggle -->
+                    <div class="flex justify-center items-center gap-2 mt-6 p-1 bg-white rounded-2xl border border-slate-200 max-w-sm mx-auto shadow-sm">
+                        <button onclick="switchTab('all')" id="tab-all" class="tab-btn flex-1 py-2 text-xs font-bold rounded-xl active-tab transition-all">전체보기</button>
+                        <button onclick="switchTab('hop')" id="tab-hop" class="tab-btn flex-1 py-2 text-xs font-bold text-slate-600 rounded-xl hover:bg-slate-100 transition-all">Hop 🐇</button>
+                        <button onclick="switchTab('step')" id="tab-step" class="tab-btn flex-1 py-2 text-xs font-bold text-slate-600 rounded-xl hover:bg-slate-100 transition-all">Step 👟</button>
+                        <button onclick="switchTab('jump')" id="tab-jump" class="tab-btn flex-1 py-2 text-xs font-bold text-slate-600 rounded-xl hover:bg-slate-100 transition-all">Jump 🏎️</button>
+                    </div>
+                </div>
 
-                            <p class="text-xs text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed mb-4">
-                                "축의금 봉투 입구 앞에서 15분간 고뇌하는 행위의 사회적 비용에 관하여 12편의 논문 발표."
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="classGrid">
+                    
+                    <!-- Hop Class Card -->
+                    <div class="level-card class-hop flat-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-skybrand-400">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl">🐇</span>
+                                <span class="px-2.5 py-1 bg-skybrand-50 text-skybrand-700 text-xs font-extrabold rounded-lg">기초 단계</span>
+                            </div>
+                            <h3 class="text-2xl font-black text-slate-900 mb-1">Hop Class</h3>
+                            <div class="text-xs font-bold text-skybrand-600 mb-4">영역: 말하기(Speaking)</div>
+                            
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                                인물 관계도를 중심으로 전체 이야기를 직관적으로 파악합니다. 핵심 어휘와 대사를 복습하며 영어를 암기가 아닌 자연스러운 표현으로 익혀갑니다.
                             </p>
+
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2 mb-4">
+                                <div class="text-xs font-bold text-slate-900">주요 실습 내용</div>
+                                <ul class="text-xs text-slate-600 space-y-1">
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>인물 관계도 기반 스토리 파악</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>상황별 기초 어휘 및 핵심 표현 습득</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>실생활 자연스러운 말하기 경험 형성</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="text-[11px] text-academic-crimson font-medium pt-2 border-t border-slate-100">
-                            ★ 특기: 축의금 봉투 앞에서 15분 고민하기
+                        <div class="text-xs text-slate-400 font-medium pt-2">
+                            연계 영화: Cars 1 ➔ 라따뚜이
                         </div>
                     </div>
 
-                    <!-- Faculty 2 -->
-                    <div class="bg-white rounded-2xl p-6 border border-academic-border card-shadow flex flex-col justify-between">
+                    <!-- Step Class Card -->
+                    <div class="level-card class-step flat-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-skybrand-500">
                         <div>
-                            <div class="w-16 h-16 rounded-2xl bg-academic-crimson text-white flex items-center justify-center font-serif font-bold text-xl mb-4 shadow">
-                                이
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl">👟</span>
+                                <span class="px-2.5 py-1 bg-skybrand-100 text-skybrand-800 text-xs font-extrabold rounded-lg">심화 표현</span>
                             </div>
-                            <span class="px-2 py-0.5 bg-rose-100 text-rose-900 text-[11px] font-bold rounded">선임연구원</span>
-                            <h3 class="text-xl font-bold text-academic-navy mt-1 mb-2 serif-title">이통장 교수</h3>
+                            <h3 class="text-2xl font-black text-slate-900 mb-1">Step Class</h3>
+                            <div class="text-xs font-bold text-skybrand-600 mb-4">영역: 말하기(Speaking) / 쓰기(Writing)</div>
                             
-                            <div class="space-y-1.5 text-xs text-slate-600 mb-4">
-                                <p><strong class="text-slate-800">전문분야:</strong> 개인 재정 보존학 & 잔액 방어</p>
-                                <p><strong class="text-slate-800">연구경력:</strong> 12년</p>
-                            </div>
-
-                            <p class="text-xs text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed mb-4">
-                                "통장 잔액 5자리 수 유지와 주말 결혼식 3건 중복 참석 시 잔액 손실에 대한 수리적 모델 개발."
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                                "내가 만약 영화 속 인물이었다면?" 가정 상황 질문을 바탕으로 스스로 스토리를 구성하고, 표현력과 창의적 사고력을 동시에 기릅니다.
                             </p>
+
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2 mb-4">
+                                <div class="text-xs font-bold text-slate-900">주요 실습 내용</div>
+                                <ul class="text-xs text-slate-600 space-y-1">
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>상황 가정 맞춤 워크시트 작성</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>등장인물 분석 & 사회적 메시지 탐구</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>오디오북 및 북트레일러 제작 프로젝트</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="text-[11px] text-academic-crimson font-medium pt-2 border-t border-slate-100">
-                            ★ 특기: 앱 열자마자 잔액 실시간 확인하기
+                        <div class="text-xs text-slate-400 font-medium pt-2">
+                            연계 영화: Cars 1 ➔ 라따뚜이
                         </div>
                     </div>
 
-                    <!-- Faculty 3 -->
-                    <div class="bg-white rounded-2xl p-6 border border-academic-border card-shadow flex flex-col justify-between">
+                    <!-- Jump Class Card -->
+                    <div class="level-card class-jump flat-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-skybrand-600">
                         <div>
-                            <div class="w-16 h-16 rounded-2xl bg-slate-700 text-slate-100 flex items-center justify-center font-serif font-bold text-xl mb-4 shadow">
-                                박
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-2xl">🏎️</span>
+                                <span class="px-2.5 py-1 bg-skybrand-600 text-white text-xs font-extrabold rounded-lg">마스터 단계</span>
                             </div>
-                            <span class="px-2 py-0.5 bg-slate-200 text-slate-800 text-[11px] font-bold rounded">객원연구원</span>
-                            <h3 class="text-xl font-bold text-academic-navy mt-1 mb-2 serif-title">박친구 연구원</h3>
+                            <h3 class="text-2xl font-black text-slate-900 mb-1">Jump Class</h3>
+                            <div class="text-xs font-bold text-skybrand-600 mb-4">영역: Speaking / Writing / Listening / Debate</div>
                             
-                            <div class="space-y-1.5 text-xs text-slate-600 mb-4">
-                                <p><strong class="text-slate-800">전문분야:</strong> 인간관계 리스크 및 양심 분석</p>
-                                <p><strong class="text-slate-800">연구경력:</strong> 3개월</p>
-                            </div>
-
-                            <p class="text-xs text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed mb-4">
-                                "모든 가설 검증 과정에서 '그래도 사람이 그러면 안 되지'라는 양심적 반론을 제기하는 브레이크 역할."
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                                Cars 1 쉐도잉으로 다진 배경 지식을 바탕으로 다채로운 주제의 영화를 깊이 있게 다루며, 자신의 의견을 논리적으로 개진하는 디베이트 종합 과정입니다.
                             </p>
+
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2 mb-4">
+                                <div class="text-xs font-bold text-slate-900">주요 실습 내용</div>
+                                <ul class="text-xs text-slate-600 space-y-1">
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>Cars 1 사전 쉐도잉 (레이싱 표현 Mastery)</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>고급 구문 습득 및 장문 스피킹</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <span class="text-skybrand-500 font-bold">•</span>
+                                        <span>영화 주제 기반 논리적 영어 디베이트</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="text-[11px] text-academic-crimson font-medium pt-2 border-t border-slate-100">
-                            ★ 특기: “그래도 이번에는 내야 하지 않을까?” 말하기
+                        <div class="text-xs text-slate-400 font-medium pt-2">
+                            연계 영화: Cars 1 ➔ F1 더 무비 & 악마는 프라다를 입는다
                         </div>
                     </div>
 
@@ -1039,221 +405,229 @@
             </div>
         </section>
 
-        <!-- Final Paper Conclusion Section -->
-        <section id="conclusion" class="py-16 sm:py-24 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6">
-                
-                <!-- Academic Report Container -->
-                <div class="border-2 border-academic-navy p-8 sm:p-14 bg-[#fffefc] card-shadow relative">
-                    
-                    <!-- Paper Top Header -->
-                    <div class="border-b-2 border-slate-900 pb-6 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <!-- Movie Curriculum Deep Dive Section -->
+        <section id="movies" class="py-16 sm:py-24 bg-white border-t border-b border-slate-200/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-skybrand-600 uppercase tracking-widest">Movie Selection</span>
+                    <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mt-1">
+                        어떤 영화와 함께 배우나요?
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">수준에 따라 깊어지는 영화 연계 프로젝트 학습</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Movie 1: Ratatouille Card -->
+                    <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 flex flex-col justify-between">
                         <div>
-                            <div class="text-xs font-mono font-bold text-slate-500">K-MERA FINAL REPORT 2026-08</div>
-                            <h2 class="text-2xl sm:text-3xl font-black text-academic-navy serif-title">최종 연구 보고서</h2>
-                        </div>
-                        <div class="academic-stamp px-3 py-1 rounded text-xs font-bold">
-                            최종 승인 완료
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
+                                    🍳
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-skybrand-600">Hop & Step Class</span>
+                                    <h3 class="text-xl font-extrabold text-slate-900">애니메이션 「라따뚜이」</h3>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                                생생한 요리 무대와 인물 간의 갈등, 협동 스토리를 중심으로 실생활 표현과 비판적 사고력을 단계별로 넓혀갑니다.
+                            </p>
+
+                            <!-- Step Breakdown inside Ratatouille -->
+                            <div class="space-y-3">
+                                <div class="p-3.5 bg-white rounded-2xl border border-slate-200">
+                                    <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+                                        <span class="w-2 h-2 rounded-full bg-skybrand-400"></span>
+                                        Hop Class 활동
+                                    </div>
+                                    <p class="text-xs text-slate-600 pl-3.5">
+                                        핵심 장면 및 대사를 이해하고, 실생활 필수 기능인 <strong>요청·제안·설득</strong> 표현을 자연스럽게 습득합니다.
+                                    </p>
+                                </div>
+
+                                <div class="p-3.5 bg-white rounded-2xl border border-slate-200">
+                                    <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+                                        <span class="w-2 h-2 rounded-full bg-skybrand-600"></span>
+                                        Step Class 활동
+                                    </div>
+                                    <p class="text-xs text-slate-600 pl-3.5">
+                                        등장인물 분석과 사회적 메시지 탐구로 비판적 사고를 확장하며, <strong>오디오북 및 북트레일러 제작</strong>으로 발표 자신감을 기릅니다.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Paper Content -->
-                    <div class="space-y-6 text-sm sm:text-base text-slate-800 leading-relaxed">
+                    <!-- Movie 2: F1 Movie & Devil Wears Prada -->
+                    <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/80 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-lg font-bold text-academic-navy serif-title mb-2">1. 연구 주제</h3>
-                            <p class="text-slate-700 bg-slate-50 p-4 rounded-lg border border-slate-200">
-                                축의금을 내지 않는 안전하고 사회적으로 완벽한 방법은 존재하는가?
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center font-bold text-lg">
+                                    🏎️
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-skybrand-600">Jump Class 심화</span>
+                                    <h3 class="text-xl font-extrabold text-slate-900">「F1 더 무비」 & 「악마는 프라다를 입는다」</h3>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                                역동적인 스포츠와 전문적인 직장 라이프를 담은 두 명작으로 한 차원 높은 어휘와 표현을 배웁니다.
                             </p>
-                        </div>
 
-                        <div>
-                            <h3 class="text-lg font-bold text-academic-navy serif-title mb-2">2. 학술적 종합 결론</h3>
-                            <div class="p-6 bg-amber-50/80 border-l-4 border-academic-crimson rounded-r-xl space-y-3">
-                                <p class="text-xl sm:text-2xl font-black text-academic-navy serif-title">
-                                    결론: 존재할 수는 있다.
-                                </p>
-                                <p class="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
-                                    그러나 소중한 친구와의 긴 세월 쌓아온 우정 및 사회적 평판까지 종합적으로 산입하여 고려한다면, 
-                                    <strong class="text-academic-crimson underline underline-offset-4 decoration-2">가장 합리적이고 안전한 방법은 축의금을 내고 맛있는 밥을 든든하게 먹는 것이다.</strong>
+                            <!-- Jump Details -->
+                            <div class="p-4 bg-white rounded-2xl border border-slate-200 space-y-3">
+                                <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-skybrand-600"></span>
+                                    심화 프로젝트 & 디베이트
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">
+                                    Cars 1 쉐도잉 학습을 기초 체력 삼아 속도감 있는 직업적 어휘 및 사회적 이슈를 다룹니다. 영화 속 상황과 가치관에 대한 <strong>자발적 토론(Debate)</strong>을 진행하여 자신의 생각을 유창하게 표현합니다.
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Formal Closing Signatures -->
-                        <div class="pt-8 border-t border-slate-200 text-center space-y-4">
-                            <p class="text-lg font-bold text-academic-navy serif-title">
-                                본 연구는 여기서 종료합니다.
-                            </p>
-                            <p class="text-xs text-slate-400 font-mono">
-                                (사유: 연구비 및 연구진의 축의금 예산 고갈)
+        <!-- Growth Impact Section -->
+        <section id="growth" class="py-16 sm:py-20 bg-skybrand-50/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-skybrand-600 uppercase tracking-widest">Student Growth</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mt-1">
+                        주저하던 아이들이 보여준 변화 ✨
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Growth Card 1 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-skybrand-100 shadow-sm flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-2xl bg-skybrand-100 text-skybrand-600 flex-shrink-0 flex items-center justify-center font-black">
+                            1
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">영어로 먼저 말을 건네는 자신감</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                정답만을 맞추는 주입식 영어에서 벗어나, 애니메이션 상황에 몰입하면서 자연스럽게 먼저 영어 표현을 꺼내고 말하는 경험을 쌓아가고 있습니다.
                             </p>
                         </div>
                     </div>
 
+                    <!-- Growth Card 2 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-skybrand-100 shadow-sm flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-2xl bg-skybrand-100 text-skybrand-600 flex-shrink-0 flex items-center justify-center font-black">
+                            2
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base mb-1">스스로 찾아보는 주도적 공부 습관</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                수업을 거듭할수록 좋아하는 영화 장면을 스스로 찾아보고, 관련 영문 텍스트나 영상 콘텐츠를 알아서 탐색하는 능동적인 모습이 늘어났습니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Banner Quote -->
+                <div class="mt-8 bg-white rounded-3xl p-6 sm:p-8 border border-skybrand-200 text-center">
+                    <p class="text-sm sm:text-base font-semibold text-slate-700 leading-relaxed">
+                        🌱 "JUMP-UP 프로그램을 통해 아이들은 영어를 단순히 지식으로 배우는 것을 넘어, <br class="hidden sm:block"/>
+                        <span class="text-skybrand-600 font-bold">자신의 생각을 직접 활용하고 표현하는 소중한 경험</span>을 쌓아가고 있습니다."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Center Program Inquiry CTA -->
+        <section class="py-16 bg-white border-t border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mb-3">
+                    JUMP-UP 프로그램이 더 궁금하신가요?
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 mb-8 max-w-lg mx-auto">
+                    우리 센터의 단계별 영어 프로그램 및 아이들의 교육활동 과정에 대한 안내는 센터 방문 및 전화로 언제든 가능합니다.
+                </p>
+                <div class="inline-flex flex-col sm:flex-row gap-3">
+                    <button onclick="openInfoModal()" class="px-6 py-3.5 bg-skybrand-500 hover:bg-skybrand-600 text-white font-bold text-xs sm:text-sm rounded-xl transition-colors shadow-md shadow-skybrand-100">
+                        센터 교육 문의 안내
+                    </button>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Official Footer -->
-    <footer class="bg-academic-navy text-slate-400 py-12 border-t border-slate-800 text-xs">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-6">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-800 pb-6">
-                <div>
-                    <div class="text-white font-bold text-sm serif-title mb-1">결혼식 축의금 안 내기 연구회 (K-MERA)</div>
-                    <p class="text-slate-400 text-xs">Korea Marriage Expense Reduction Association (Parody Academic Institute)</p>
-                </div>
-                <div class="text-slate-400 text-xs">
-                    서울특별시 가상구 유머로 123 학술빌딩 404호
-                </div>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-bold text-slate-200 mb-1">삼성꿈장학재단 배움터 교육지원사업</p>
+                <p class="text-slate-500">JUMP-UP 단계별 영어교육 프로그램 센터</p>
             </div>
-
-            <!-- Parody Disclaimer -->
-            <div class="text-[11px] text-slate-400 leading-relaxed space-y-2">
-                <p>
-                    <strong>[명확한 패러디 공지]</strong> 본 웹사이트는 실제 사기, 거짓말, 도난 또는 부정한 방법의 금전 회피를 조장하지 않으며, 친구의 결혼식 문화와 축의금 부담이라는 보편적 공감대를 주제로 한 100% 가상의 유머·패러디 콘텐츠입니다.
-                </p>
-                <p>
-                    소중한 친구의 경사에 참석하실 때에는 진심 어린 마음과 적절한 축하를 전하시기 바랍니다.
-                </p>
-            </div>
-
-            <div class="pt-4 flex flex-col sm:flex-row justify-between items-center text-slate-400 text-[11px] gap-2">
-                <div>© 2026 Marriage Felicitations Evasion Research Institute. All rights parody reserved.</div>
-                <a href="#intro" class="hover:text-white transition-colors">맨 위로 이동 ↑</a>
+            <div class="text-center md:text-right text-slate-500">
+                <p>© JUMP-UP English Program. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Logic -->
+    <!-- Interactive Modal Container -->
+    <div id="infoModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full border border-slate-100 shadow-2xl relative">
+            <h4 class="text-lg font-bold text-slate-900 mb-2">JUMP-UP 프로그램 문의</h4>
+            <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                삼성꿈장학재단 배움터 교육지원사업으로 함께하는 우리 센터 영어 프로그램에 많은 관심 부탁드립니다.
+            </p>
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-2 mb-6 text-xs text-slate-700">
+                <div class="flex justify-between">
+                    <span class="text-slate-400">지원 기관</span>
+                    <span class="font-semibold text-slate-900">삼성꿈장학재단</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">프로그램</span>
+                    <span class="font-semibold text-skybrand-600">JUMP-UP 영어교육</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">운영 클래스</span>
+                    <span class="font-semibold text-slate-900">Hop / Step / Jump</span>
+                </div>
+            </div>
+            <button onclick="closeInfoModal()" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition-colors">
+                확인
+            </button>
+        </div>
+    </div>
+
     <script>
-        // Quiz Data Definition
-        const quizQuestions = [
-            {
-                q: "Q1. 신랑 또는 신부와의 관계는 어떤가요?",
-                options: [
-                    { text: "그냥 아는 사회 동료 / 건너 친구", score: 30 },
-                    { text: "꽤 친한 친구", score: 15 },
-                    { text: "학창 시절 베스트 프렌드", score: 5 },
-                    { text: "가족이나 다름없는 수혁/자매급 친구", score: 0 }
-                ]
-            },
-            {
-                q: "Q2. 결혼식 현장에 참석할 예정인가요?",
-                options: [
-                    { text: "무조건 직관 참석하여 뷔페 풀코스 예정", score: 5 },
-                    { text: "아직 고민 중이다", score: 15 },
-                    { text: "지방이거나 일정이 있어 참석 불가능하다", score: 30 }
-                ]
-            },
-            {
-                q: "Q3. 결혼식 축가를 직접 부를 수 있는 가창력이 있나요?",
-                options: [
-                    { text: "가수급 / 성악 전공자 수준으로 감동 가능", score: 25 },
-                    { text: "적당히 1음정 안 틀리고 부른다", score: 15 },
-                    { text: "솔직히 완전한 음치다", score: 5 },
-                    { text: "마이크만 잡으면 식은땀 흘리며 긴장한다", score: 0 }
-                ]
-            },
-            {
-                q: "Q4. 축의금 대신 현장에서 제공 가능한 재능이나 노동이 있나요?",
-                options: [
-                    { text: "포토존 안내, 식권 배부, 안내원 노동력", score: 25 },
-                    { text: "고품질 카메라 스냅 사진 촬영", score: 20 },
-                    { text: "자필 10장 장문 편지 및 감동 축사", score: 15 },
-                    { text: "제공 가능한 게 아무것도 없다", score: 0 }
-                ]
-            },
-            {
-                q: "Q5. 정산 후 친구가 “혹시 봉투 깜빡했어?”라고 직접 물어본다면?",
-                options: [
-                    { text: "자연스럽게 웃으며 바로 화제를 돌린다", score: 10 },
-                    { text: "솔직하게 사정을 말하고 사과한다", score: 5 },
-                    { text: "갑자기 화장실이 급하다며 자리를 피한다", score: 15 },
-                    { text: "‘축의금 안 내기 연구회’ 사이트 링크를 보낸다", score: 20 }
-                ]
-            }
-        ];
-
-        let currentQuestionIndex = 0;
-        let totalScore = 0;
-
-        // Render Current Question
-        function renderQuestion() {
-            const box = document.getElementById('quizQuestionBox');
-            const qData = quizQuestions[currentQuestionIndex];
-            
-            // Progress Update
-            const stepNum = currentQuestionIndex + 1;
-            const percent = (stepNum / quizQuestions.length) * 100;
-            document.getElementById('quizStepText').innerText = `질문 ${stepNum} / ${quizQuestions.length}`;
-            document.getElementById('quizPercentText').innerText = `${Math.round(percent)}% 완료`;
-            document.getElementById('quizProgressBar').style.width = `${percent}%`;
-
-            let optionsHTML = '';
-            qData.options.forEach((opt, idx) => {
-                optionsHTML += `
-                    <button onclick="selectOption(${opt.score})" class="w-full text-left p-4 bg-white hover:bg-amber-50 border border-slate-200 hover:border-academic-crimson rounded-xl font-medium text-xs sm:text-sm text-slate-800 transition-all flex items-center justify-between group shadow-sm mb-3">
-                        <span>${opt.text}</span>
-                        <svg class="w-4 h-4 text-slate-300 group-hover:text-academic-crimson transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </button>
-                `;
+        // Tab Switcher Logic
+        function switchTab(level) {
+            // Remove active style from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active-tab');
+                btn.classList.add('text-slate-600');
             });
 
-            box.innerHTML = `
-                <h3 class="text-base sm:text-lg font-bold text-academic-navy mb-6 serif-title">${qData.q}</h3>
-                <div>${optionsHTML}</div>
-            `;
-        }
-
-        // Option Selected Handler
-        function selectOption(score) {
-            totalScore += score;
-            currentQuestionIndex++;
-
-            if (currentQuestionIndex < quizQuestions.length) {
-                renderQuestion();
-            } else {
-                showQuizResult();
+            // Set current tab active
+            const currentTab = document.getElementById('tab-' + level);
+            if (currentTab) {
+                currentTab.classList.add('active-tab');
+                currentTab.classList.remove('text-slate-600');
             }
+
+            // Cards filter
+            const cards = document.querySelectorAll('.level-card');
+            cards.forEach(card => {
+                if (level === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    if (card.classList.contains('class-' + level)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
         }
 
-        // Show Final Result
-        function showQuizResult() {
-            document.getElementById('quizQuestionBox').classList.add('hidden');
-            document.getElementById('quizResultBox').classList.remove('hidden');
-
-            const scoreElem = document.getElementById('resultScore');
-            const diagElem = document.getElementById('resultDiagnosis');
-            const recElem = document.getElementById('resultRecommendation');
-
-            scoreElem.innerText = `${totalScore}%`;
-
-            if (totalScore <= 25) {
-                diagElem.innerText = "회피 가능성 희박 (위험 지수 극대)";
-                recElem.innerText = "추천 연구 방향: “당장 봉투 준비하고 가서 맛있는 뷔페 3접시 드시는 것이 우정과 평화에 이롭습니다.”";
-            } else if (totalScore <= 55) {
-                diagElem.innerText = "위험천만한 외줄타기 상태";
-                recElem.innerText = "추천 연구 방향: “축가나 노동력 대체 모델(연구 04)을 활용해 사전 합의를 도모하십시오.”";
-            } else {
-                diagElem.innerText = "철면피 대가 또는 특수 회피 가능 상태";
-                recElem.innerText = "추천 연구 방향: “회피 성공률은 높으나, 우정 손상 가능성이 매우 높으므로 차후 식사 한 끼를 대접하십시오.”";
-            }
-        }
-
-        // Reset Quiz
-        function resetQuiz() {
-            currentQuestionIndex = 0;
-            totalScore = 0;
-            document.getElementById('quizQuestionBox').classList.remove('hidden');
-            document.getElementById('quizResultBox').classList.add('hidden');
-            renderQuestion();
-        }
-
-        // Mobile Navigation Toggle
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
@@ -1262,6 +636,7 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
+            // Close mobile menu when clicking nav links
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
@@ -1269,10 +644,14 @@
             });
         }
 
-        // Initial Quiz Execution
-        window.onload = function() {
-            renderQuestion();
-        };
+        // Modal triggers
+        function openInfoModal() {
+            document.getElementById('infoModal').classList.remove('hidden');
+        }
+
+        function closeInfoModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+        }
     </script>
 </body>
 </html>
